@@ -1,0 +1,1277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>Title</title>
+</head>
+<title>Bootstrap demo</title>
+
+<body>
+<div class="accordion" id="accordionExample">
+  <div class="accordion-item">
+    <div class="accordion-header" id="headingOne">
+      <button class="accordion-button collapsed" type="button"
+              data-bs-toggle="collapse" data-bs-target="#collapseOne"
+              aria-expanded="false" aria-controls="collapseOne">
+        Accordion Item #1
+      </button>
+    </div>
+    <div id="collapseOne" class="accordion-collapse collapse"
+         aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+      <div class="accordion-body">AAA...</div>
+    </div>
+  </div>
+  <div class="accordion-item">...</div>
+  <div class="accordion-item">...</div>
+</div>
+最初から開いた状態で表示するには、.collapsed を削除し、aria-expanded を true とし、.show を加えてください。
+
+Code
+<div class="accordion-item">
+  <div class="accordion-header" id="headingOne">
+    <button class="accordion-button collapsed" ...
+            aria-expanded="true" ...>...</button>
+  </div>
+  <div id="collapseOne" class="accordion-collapse collapse show" ...>
+    ...
+  </div>
+</div>
+.accordion-flush を追加すると、デフォルトの背景色、境界線、角の丸めを削除します。
+
+Code
+<div class="accordion accordion-flush" id="accordionFlushExample">...</div>
+アラート(Alerts)
+.alert, .alert-{primary|secondary|success|danger|warning|info|light|dark} はコンテキストに応じた配色のアラートメッセージを表示します。
+
+Example
+Primary
+Secondary
+Success
+Danger
+Warning
+Info
+Light
+Dark
+Code
+<div class="alert alert-primary" role="alert">Primary</div>
+<div class="alert alert-secondary" role="alert">Secondary</div>
+<div class="alert alert-success" role="alert">Success</div>
+<div class="alert alert-danger" role="alert">Danger</div>
+<div class="alert alert-warning" role="alert">Warning</div>
+<div class="alert alert-info" role="alert">Info</div>
+<div class="alert alert-light" role="alert">Light</div>
+<div class="alert alert-dark" role="alert">Dark</div>
+アラート中のリンク(Link in alert)
+.alert-link はアラート中のリンクを配色に応じた色で表示します。
+
+Example
+Primary link
+Code
+<div class="alert alert-primary" role="alert">
+  Primary <a href="#" class="alert-link">link</a>
+</div>
+アラート中のヘッダ(Alert header)
+.alert-heading はアラート中のヘッダを適切な色で表示します。
+
+Example
+Error!!
+No such file or directory.
+Code
+<div class="alert alert-danger" role="alert">
+  <h4 class="alert-heading">Error!!</h4>
+  No such file or directory.
+</div>
+アラートアイコン(Alert icon)
+アイコンを表示することもできます。
+
+Example
+No such file or directory.
+Code
+<div class="alert alert-danger mb-0" role="alert">
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+       fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
+    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293
+        8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0
+        .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
+  </svg>
+  No such file or directory.
+</div>
+クローズボタン(Close button)
+.alert-dismissible は data-bs-dismiss="alert" によるクローズボタンで閉じることが可能なアラートを表示します。
+
+Example
+Holy guacamole! You should check in on some of those fields below.
+Code
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+  <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+バッチ(Badge)
+.badge や .bg-{context} を用いてバッジを表示します。New! などのようにちょっと目立たせたい通知部品として使用したりします。
+
+Example
+Primary Secondary Success Danger Warning Info Light Dark
+Code
+<span class="badge bg-primary">Primary</span>
+<span class="badge bg-secondary">Secondary</span>
+<span class="badge bg-success">Success</span>
+<span class="badge bg-danger">Danger</span>
+<span class="badge bg-warning text-dark">Warning</span>
+<span class="badge bg-info text-dark">Info</span>
+<span class="badge bg-light text-dark">Light</span>
+<span class="badge bg-dark">Dark</span>
+.rounded-pill を指定すると角の丸いバッジを表示します。
+
+Example
+Primary Secondary Success Danger Warning Info Light Dark
+Code
+<span class="badge rounded-pill bg-primary">Primary</span>
+下記のようにバッジをカウンターとして使用する例もあります。
+
+Example
+Code
+<button type="button" class="btn btn-primary">
+  Messages <span class="badge bg-secondary">4</span>
+</button>
+パンくずリスト(Breadcrumb)
+.breadcrumb, .breadcrumb-item を用いてパンくずリストを表示します。現在のページには .active をつけます。aria-label や aria-current はスクリーンリーダーなどにこれがパンくずリストであること、現在のページが Data であることなどを伝えます。
+
+Example
+Home
+Library
+Data
+Code
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#">Home</a></li>
+    <li class="breadcrumb-item"><a href="#">Library</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Data</li>
+  </ol>
+</nav>
+--bs-breadcrumb-divider で区切り記号を指定することができます。
+
+Example
+Home
+Library
+Data
+Code
+<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+  ...
+</nav>
+下記のようにして、アイコンを指定することもできます。
+
+Example
+Home
+Library
+Data
+Code
+<nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+  ...
+</nav>
+ボタン(Buttons)
+.btn, .btn-{context} は、コンテキストに応じた色のボタンを表示します。
+
+Example
+
+Code
+<button type="button" class="btn btn-primary">Primary</button>
+<button type="button" class="btn btn-secondary">Secondary</button>
+<button type="button" class="btn btn-success">Success</button>
+<button type="button" class="btn btn-danger">Danger</button>
+<button type="button" class="btn btn-warning">Warning</button>
+<button type="button" class="btn btn-info">Info</button>
+<button type="button" class="btn btn-light">Light</button>
+<button type="button" class="btn btn-dark">Dark</button>
+<button type="button" class="btn btn-link">Link</button>
+アウトラインボタン(Outline button)
+.btn-outline-{context} はアウトラインボタンを表示します。
+
+Example
+
+Code
+<button type="button" class="btn btn-outline-primary">Primary</button>
+...
+ボタンサイズ(Button size)
+.btn-lg は大きなボタンを、.btn-sm は小さなボタンを表示します。
+
+Example
+
+Code
+<button type="button" class="btn btn-primary btn-lg">Large</button>
+<button type="button" class="btn btn-primary">Normal</button>
+<button type="button" class="btn btn-primary btn-sm">Small</button>
+無効化ボタン(Disabled button)
+disabled をつけると無効化されたボタンを表示します。
+
+Example
+Code
+<button type="button" class="btn btn-primary" disabled>Disabled</button>
+トグルボタン(Toggle button)
+data-bs-toggle="button" をつけるとクリックする度にアクティブ状態がトグルするボタンを表示します。アクティブなボタンには .active が付加され、色が少し濃くなります。
+
+Example
+
+Code
+<button type="button" data-bs-toggle="button" class="btn btn-primary">Normal</button>
+<button type="button" data-bs-toggle="button" class="btn btn-primary active">Active</button>
+ボタングループ(Button group)
+.btn-group はボタングループを表示します。
+
+Example
+Code
+<div class="btn-group" role="group" aria-label="Basic example">
+  <button type="button" class="btn btn-primary">Left</button>
+  <button type="button" class="btn btn-primary">Middle</button>
+  <button type="button" class="btn btn-primary">Right</button>
+</div>
+ボタンツールバー(Button toolbar)
+.btn-toolbar はボタングループから構成されるツールバーを表示します。
+
+Example
+Code
+<div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+  <div class="btn-group me-2" role="group" aria-label="First group">
+    <button type="button" class="btn btn-primary">1</button>
+    <button type="button" class="btn btn-primary">2</button>
+    <button type="button" class="btn btn-primary">3</button>
+    <button type="button" class="btn btn-primary">4</button>
+  </div>
+  <div class="btn-group me-2" role="group" aria-label="Second group">
+    <button type="button" class="btn btn-secondary">5</button>
+    <button type="button" class="btn btn-secondary">6</button>
+    <button type="button" class="btn btn-secondary">7</button>
+  </div>
+</div>
+ボタングループのサイズ(Size of button group)
+.btn-group-lg は大きな、.btn-group-sm は小さなボタングループを表示します。
+
+Example
+
+
+Code
+<div class="btn-group btn-group-lg" role="group" aria-label="Large button group">...</div>
+<div class="btn-group" role="group" aria-label="Default button group">...</div>
+<div class="btn-group btn-group-sm" role="group" aria-label="Small button group">...</div>
+ボタングループのネスト(Nest of button group)
+ボタングループを入れ子で定義することで、下記のようにドロップダウンボタンをボタングループ化することもできます。
+
+Example
+Code
+<div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+  <button type="button" class="btn btn-primary">1</button>
+  <button type="button" class="btn btn-primary">2</button>
+  <div class="btn-group" role="group">
+    <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle"
+            data-bs-toggle="dropdown" aria-expanded="false">Menu</button>
+    <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+      <li><a class="dropdown-item" href="#nest_button_group">Menu#1</a></li>
+      <li><a class="dropdown-item" href="#nest_button_group">Menu#2</a></li>
+    </ul>
+  </div>
+</div>
+垂直ボタングループ(Vertical button group)
+.btn-group-vertical はボタングループのボタンを縦方向に並べます。
+
+Example
+Code
+<div class="btn-group-vertical" role="group" aria-label="Basic example">
+  <button type="button" class="btn btn-primary">Up</button>
+  <button type="button" class="btn btn-primary">Middle</button>
+  <button type="button" class="btn btn-primary">Down</button>
+</div>
+カード(Cards)
+.card はカードを表示します。.card-img-top は上部に、.card-img-bottom は下部に画像を表示します。.card-body はカード本文、.card-title はタイトル、.card-subtitle はサブタイトル、.card-text はテキスト、.card-link はリンクを表示します。
+
+Example
+Card example
+Card title
+Card subtitle
+Some quick example text to build on the card title and make up the bulk of the card's content.
+
+link.
+
+Code
+<div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="Card example">
+  <div class="card-body">
+    <div class="h5"card-title">Card title</div>
+  <div class="h6 card-subtitle">Card subtitle</div>
+  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  <p><a href="#" class="card-link">link.</a></p>
+  <a href="#" class="btn btn-primary">Go somewhere</a>
+</div>
+</div>
+カードのヘッダとフッタ(Card header & footer)
+.card-header はカードのヘッダを、.card-footer はカードのフッタを表示します。
+
+Example
+Card header...
+Text...
+Card footer...
+Code
+<div class="card">
+  <div class="card-header">Card header...</div>
+  <div class="card-body">
+    <div class="card-text">Text...</div>
+  </div>
+  <div class="card-footer">Card footer...</div>
+</div>
+ナビゲーション(Navigation)
+カードにナビゲーションをつけるには ナビゲーション と .card-header-tabs を指定します。
+
+Example
+AAA
+BBB
+CCC
+AAA
+.....
+
+Code
+<div class="card">
+  <div class="card-header">
+    <div class="nav nav-tabs card-header-tabs">
+      <li class="nav-item"><a class="nav-link active">AAA</a></li>
+      <li class="nav-item"><a class="nav-link">BBB</a></li>
+      <li class="nav-item"><a class="nav-link">CCC</a></li>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="h5 card-title">AAA</div>
+    <p>.....</p>
+  </div>
+</div>
+カードのオーバーレイ(Card overlay)
+.card-img, .card-img-overlay はタイトルやテキストを画像に重ね合わせて表示します。
+
+Example
+Card example
+Card title
+Text...
+
+Code
+<div class="card" style="width:20rem">
+  <img src="..." class="card-img" alt="Card example">
+  <div class="card-img-overlay text-white">
+    <div class="h5 card-title">Card title</div>
+    <p class="card-text">Text...</p>
+  </div>
+</div>
+カードグループ(Card group)
+.card-group は複数のカードから構成されるカードグループを表示します。
+
+Example
+Header#1
+Text...
+Header#2
+Text...
+Header#3
+Text...
+Header#4
+Text...
+Code
+<div class="card-group">
+  <div class="card">...</div>
+  <div class="card">...</div>
+  <div class="card">...</div>
+  <div class="card">...</div>
+</div>
+カルーセル(Carousel)
+.carousel, .carousel-inner, .carousel-item は下記のように使用してカルーセルを表示します。.slide をつけると画像がスライドして切り替わります。.carousel-indicators は下部のインジケーターを表示します。.carousel-caption はカルーセル上にキャプションを表示します。.carousel-control-prev, .carousel-control-next は進むボタン・戻るボタン、.carousel-control-prev-icon, .carousel-control-next-icon はそのアイコンを表示します。data-bs-target にはカルーセルのIDを設定してください。
+
+Example
+
+...
+First slide
+This is first slide.
+
+
+Previous
+Next
+Code
+<div id="carouselExample" class="carousel slide" data-bs-ride="carousel" style="width:18rem">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="..." class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <div class="h5">First slide</div>
+        <p>This is first slide.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="..." class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <div class="h5">Second slide</div>
+        <p>This is seconde slide.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="..." class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <div class="h5">Third slide</div>
+        <p>This is third slide.</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+フェードイン・アウト(Fade-in & out)
+.carousel-fade を指定すると、画像がフェードアウト・フェードインで表示されます。
+
+Example
+
+...
+First slide
+This is first slide.
+
+
+Previous
+Next
+Code
+<div id="carouselExample2" class="carousel slide carousel-fade" data-bs-ride="carousel" style="width:18rem">
+  ...
+</div>
+カルーセルのインターバル(Carousel interval)
+data-bs-interval を指定すると、指定したインターバル(ミリ秒)毎にカルーセルを切り替えます。
+
+Example
+
+...
+First slide
+This is first slide.
+
+...
+Second slide
+This is seconde slide.
+
+
+Previous
+Next
+Code
+<div id="carouselExample3" class="carousel slide" data-bs-ride="carousel" style="width:18rem">
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="2000">
+      ...
+      カルーセルのダークモード(Dark carousel)
+      .carousel-dark を指定すると、テキスト、インジケータ、アイコンなどを黒系の色で表示します。
+
+      Example
+
+      ...
+      First slide
+      This is first slide.
+
+
+      Previous
+      Next
+      Code
+      <div id="carouselExample4" class="carousel slide carousel-dark" data-bs-ride="carousel" style="width:18rem">
+        ...
+      </div>
+      クローズボタン(Close button)
+      .btn-close はクローズボタンを表示します。.btn-close-white は白いクローズボタンを表示します。disabled が指定されると、無効化状態のクローズボタンを表示します。
+
+      Example
+
+
+      Code
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-2 bg-light border text-center">
+            <button type="button" class="btn-close" aria-label="Close"></button>
+            <button type="button" class="btn-close" aria-label="Close" disabled></button>
+          </div>
+          <div class="col-2 bg-dark border text-center">
+            <button type="button" class="btn-close btn-close-white" aria-label="Close"></button>
+            <button type="button" class="btn-close btn-close-white" aria-label="Close" disabled></button>
+          </div>
+        </div>
+      </div>
+      コラプス(Collapse)
+      .collapse は潰れる、崩れるなどの意味です。コラプスの対象要素を閉じたり開いたりすることができます。コラプスを制御するリンクやボタンには data-bs-toggle="collapse" を指定し、リンクの場合は href, ボタンの場合は data-bs-target でコラプス対象要素のIDを指定します。ID の代わりに .collapseExample などのクラスを指定すると、コラプス対象要素を複数同時に開閉することができます。
+
+      Example
+
+      Code
+      <div>
+        <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample"
+           role="button" aria-expanded="false" aria-controls="collapseExample">Link with href</a>
+        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample"
+                aria-expanded="false" aria-controls="collapseExample"> Button with data-bs-target</button>
+      </div>
+      <div class="collapse" id="collapseExample">
+        <div class="card card-body">
+          Some placeholder content for the collapse component.
+          This panel is hidden by default but revealed when the user activates the relevant trigger.
+        </div>
+      </div>
+      ドロップダウン(Dropdown)
+      .dropdown, .dropdown-toggle, .dropdown-menu, .dropdown-item はドロップダウンメニューを構成します。メニューには data-bs-toggle="dropdown" を指定します。
+
+      Example
+      Code
+      <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button"
+                id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Menu</button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li><a class="dropdown-item" href="#">Menu#1</a></li>
+          <li><a class="dropdown-item" href="#">Menu#2</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="#">Menu#3</a></li>
+        </ul>
+      </div>
+      ドロップダウンのダークモード(Dark dropdown)
+      .dropdown-menu-dark を指定するとダーク系配色のドロップダウンを表示します。
+
+      Example
+      Code
+      <div class="dropdown">
+        <button ...>Menu</button>
+        <ul class="dropdown-menu dropdown-menu-dark" ...>
+          ...
+        </ul>
+      </div>
+      ドロップダウンの方向(Direction of dropdown)
+      .dropdown の代わりに .dropup, .dropstart, .dropend を指定すると、上方向、テキストの開始方向、終了方向にドロップダウンメニューを表示することができます。
+
+      Example
+      Code
+      <div class="dropdown">...</div>
+      <div class="dropup">...</div>
+      <div class="dropstart">...</div>
+      <div class="dropend">...</div>
+      ドロップダウンメニューの有効化と無効化(Active or disabled dropdown)
+      .active, .disabled を指定することでドロップダウンメニューを有効化・無効化することができます。
+
+      Example
+      Code
+      <div class="dropdown">
+        <button ...>Menu</button>
+        <ul class="dropdown-menu" ...>
+          <li><a class="dropdown-item" href="#">Menu#1</a></li>
+          <li><a class="dropdown-item active" href="#">Menu#2</a></li>
+          <li><a class="dropdown-item disabled" href="#">Menu#3</a></li>
+        </ul>
+      </div>
+      ドロップダウンメニューのアライン(Align of dropdown)
+      .dropdown-menu-start, .dropdown-menu-end は、ドロップダウンメニューをテキストの開始方向・終了方向位置に表示します。.dropdown-menu-{breakpoint}-start, .dropdown-menu-{breakpoint}-end でブレークポイントを指定することもできます。
+
+      Example
+      Code
+      <div class="dropdown">
+        <button ...>Start-aligned example</button>
+        <ul class="dropdown-menu dropdown-menu-start">...</ul>
+      </div>
+      <div class="dropdown">
+        <button ...>End-aligned example</button>
+        <ul class="dropdown-menu dropdown-menu-end">...</ul>
+      </div>
+      ヘッダと区切り線
+      .dropdown-header はヘッダタイトルを表示します。.dropdown-divider は区切り線を表示します。
+
+      Example
+      Code
+      <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button"
+                id="dropdownExampleContent" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownExampleContent">
+          <li><div class="h6 dropdown-header">Header</div></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="#">Menu#1</a></li>
+          <li><a class="dropdown-item" href="#">Menu#2</a></li>
+        </ul>
+      </div>
+      テキストやフォーム
+      ドロップダウンメニューにテキストやフォームを表示することもできます。
+
+      Example
+      Code
+      <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button"
+                id="dropdownExampleTextForm" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</button>
+        <div class="dropdown-menu" aria-labelledby="dropdownExampleTextForm">
+          <div class="p-2">
+            <p>Text...</p>
+          </div>
+          <form class="p-2 mb-2">
+            <label for="dropdownExampleForm" class="form-label">Label</label>
+            <input type="text" class="form-control" id="dropdownExampleForm">
+          </form>
+        </div>
+      </div>
+      オフセット(Offset)
+      data-bs-offset="x,y" を指定すると、メニューの表示位置を x, y だけずらすことができます。
+
+      Example
+      Code
+      <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button"
+                data-bs-toggle="dropdown" data-bs-offset="10,20" ...>Offset</button>
+        ...
+      </div>
+      スプリットボタン(Split button)
+      .dropdown-toggle-split を指定することでスプリット（分割）ボタンを表示することができます。data-bs-reference="parent" はメニューを親要素の位置に合わせて表示することを指定します。
+
+      Example
+      Code
+      <div class="btn-group">
+        <button type="button" class="btn btn-primary">Action#1</button>
+        <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split"
+                id="dropdownMenuSplit" data-bs-toggle="dropdown" aria-expanded="false" data-bs-reference="parent">
+          <span class="visually-hidden">Toggle Dropdown</span>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuSplit">
+          <li><a class="dropdown-item" href="#">Action#2</a></li>
+          <li><a class="dropdown-item" href="#">Action#3</a></li>
+        </ul>
+      </div>
+      オートクローズ(Auto close)
+      data-bs-auto-close にはオートクローズの振る舞いを指定します。デフォルトでは、ボタンクリック、メニュークリック、アウトサイドクリックでメニューが閉じます。"inside" を指定するとボタンクリック、メニュークリックで、"outside" を指定するとボタンクリック、アウトサイドクリックで、"false" を指定するとボタンクリックのみでメニューが閉じます。
+
+      Example
+      Code
+      <button class="btn btn-primary dropdown-toggle" type="button">...</button>
+      <button class="btn btn-primary dropdown-toggle" type="button" data-bs-auto-close="inside">...</button>
+      <button class="btn btn-primary dropdown-toggle" type="button" data-bs-auto-close="outside">...</button>
+      <button class="btn btn-primary dropdown-toggle" type="button" data-bs-auto-close="false">...</button>
+      オプション(Options)
+      data-bs-offset、data-bs-auto-close の他にも、data-bs-boundary、data-bs-reference、data-bs-display、data-bs-popper-config などのオプションがあります。詳細は下記を参照してください。
+
+      Dropdown のオプション
+      リストグループ(List group)
+      .list-group, .list-group-item はリストグループを表示します。
+
+      Example
+      Item#1
+      Item#2
+      Item#3
+      Code
+      <ul class="list-group">
+        <li class="list-group-item">Item#1</li>
+        <li class="list-group-item">Item#2</li>
+        <li class="list-group-item">Item#3</li>
+      </ul>
+      アクティブ・無効化
+      .active はリスト項目をアクティブにします。.disabled は無効化します。
+
+      Example
+      Normal
+      Active
+      Disabled
+      Code
+      <ul class="list-group">
+        <li class="list-group-item">Normal</li>
+        <li class="list-group-item active">Active</li>
+        <li class="list-group-item disabled">Disabled</li>
+      </ul>
+      アクション(List group action)
+      <a> や <button> に .list-group-item-action を指定することで、アイテムがアクションを受け付けることを示します。マウスを乗せた時やクリックした際に少し色が変化します。
+
+        Example
+        Action#1
+        Action#2
+        Action#1
+        Action#2
+        Code
+        <div class="list-group">
+          <a href="#" class="list-group-item list-group-item-action">Action#1</a>
+          ...
+          <div class="list-group">
+            <button class="list-group-item list-group-item-action">Action#1</button>
+            ...
+            フラッシュ(Flush)
+            .list-group-flush を指定すると一部のボーダーや角の丸みが除去されます。
+
+            Example
+            Item#1
+            Item#2
+            Code
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Item#1</li>
+              <li class="list-group-item">Item#2</li>
+            </ul>
+            番号付き(Numbered)
+            <ol> に .list-group-numbered を指定すると番号付きのリストグループを表示します。
+
+              Example
+              Item#1
+              Item#2
+              Code
+              <ol class="list-group list-group-numberd">
+                <li class="list-group-item">Item#1</li>
+                <li class="list-group-item">Item#2</li>
+              </ol>
+              水平(Horizontal)
+              .list-group-horizontal はリストグループを水平に表示します。.list-group-horizontal-{breakpoint} でブレークポイントを指定することもできます。
+
+              Example
+              Item#1
+              Item#2
+              Item#3
+              Code
+              <ul class="list-group list-group-horizontal">
+                <li class="list-group-item">Item#1</li>
+                <li class="list-group-item">Item#2</li>
+                <li class="list-group-item">Item#3</li>
+              </ul>
+              コンテキスト(Context)
+              .list-group-item-{context} でコンテキストを指定することができます。
+
+              Example
+              Item#1
+              Item#2
+              Item#3
+              Code
+              <ul class="list-group">
+                <li class="list-group-item list-group-item-primary">Item#1</li>
+                <li class="list-group-item list-group-item-success">Item#2</li>
+                <li class="list-group-item list-group-item-danger">Item#3</li>
+              </ul>
+              モーダル(Modal)
+              .modal はモーダルダイアログを表示します。.modal-dialog, .modal-content, .modal-header, .modal-title, .modal-body, .modal-footer はそれぞれ、ダイアログ、コンテンツ、ヘッダ、タイトル、ボディ、フッタを表示します。開くボタンには data-bs-toggle="modal" と、data-bs-target でターゲットとするモーダル要素のIDを指定してください。
+
+              Example
+              Code
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Show modal
+              </button>
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      Body...
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">OK</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              スタティックバックドロップ(Static backdrop)
+              data-bs-backdrop="static" と data-bs-keyboard="false" は、モーダルダイアログ以外の箇所をクリックしたり ESC キーを押してもダイアログが閉じないようにします。
+
+              Example
+              Code
+              <div class="modal fade" id="exampleModal2" data-bs-backdrop="static" data-bs-keyboard="false" ...>
+                ...
+                スクロール(Scrollable)
+                .modal-dialog-scrollable はダイアログの中身をスクロール可能にします。
+
+                Scroll
+                Code
+                <div class="modal-dialog modal-dialog-scrollable">
+                  ...
+                  中央表示(Centered)
+                  .modal-dialog-centered はダイアログを上下方向の中央に表示します。
+
+                  Example
+                  Code
+                  <div class="modal-dialog modal-dialog-centered">
+                    ...
+                    サイズ(Sizes)
+                    .modal-sm, .modal-lg, .modal-xl はダイアログの最大横幅を指定します。
+
+                    Example
+                    Code
+                    <div class="modal-dialog modal-sm">...</div>
+                    <div class="modal-dialog">...</div>
+                    <div class="modal-dialog modal-lg">...</div>
+                    <div class="modal-dialog modal-xl">...</div>
+                    フルスクリーン(Fullscreen)
+                    .modal-fullscreen はダイアログをフルスクリーンで表示します。.modal-full-screen-{breakpoint}-down は画面の横幅がブレークポイントサイズ以下の場合にフルスクリーンダイアログを表示します。
+
+                    Example
+                    Code
+                    <div class="modal-dialog modal-fullscreen">...</div>
+                    <div class="modal-dialog modal-fullscreen-sm-down">...</div>
+                    <div class="modal-dialog modal-fullscreen-md-down">...</div>
+                    <div class="modal-dialog modal-fullscreen-lg-down">...</div>
+                    <div class="modal-dialog modal-fullscreen-xl-down">...</div>
+                    <div class="modal-dialog modal-fullscreen-xxl-down">...</div>
+                    ナビとタブ(Navs and tabs)
+                    .nav, .nav-item, .nav-link はナビゲーションリンクを表示します。.active はアクティブな、.disabled は無効化されたリンクを表示します。
+
+                    Example
+                    Active
+                    Link
+                    Disabled
+                    Code
+                    <ul class="nav">
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Active</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                      </li>
+                    </ul>
+                    ナビ(Navs)
+                    <nav> を用いて表示することもできます。
+
+                      Example
+                      Active
+                      Link
+                      Disabled
+                      Code
+                      <nav class="nav">
+                        <a class="nav-link active" aria-current="page" href="#">Active</a>
+                        <a class="nav-link" href="#">Link</a>
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                      </nav>
+                      タブ(Tabs)
+                      .nav-tabs はタブ形式で表示します。
+
+                      Example
+                      Active
+                      Link
+                      Disabled
+                      Code
+                      <ul class="nav nav-tabs">
+                        ...
+                      </ul>
+                      ピル(Pills)
+                      .nav-pills を指定するとアクティブリンクが下記のように表示されます。
+
+                      Example
+                      Active
+                      Link
+                      Disabled
+                      Code
+                      <ul class="nav nav-pills">
+                        ...
+                      </ul>
+                      フィル(Fill)
+                      .nav-fill を指定すると横幅いっぱいに表示します。
+
+                      Example
+                      Active
+                      Link
+                      Disabled
+                      Code
+                      <ul class="nav nav-pills nav-fill">
+                        ...
+                      </ul>
+                      ナビバー(Navbar)
+                      .navbar はナビバーを表示します。.navbar-dark はダーク系、.navbar-light はライト系で表示します。.navbar-brand でブランド名を、.navbar-text でテキストを表示します。
+
+                      Example
+                      Navbar
+                      Powerd by ABC.
+                      Navbar
+                      Powerd by ABC.
+                      Code
+                      <nav class="navbar navbar-dark bg-dark">
+                        <div class="container-fluid">
+                          <a class="navbar-brand" href="#">Navbar</a>
+                          <span class="navbar-text">Powerd by ABC.</span>
+                        </div>
+                      </nav>
+                      <nav class="navbar navbar-light" style="background-color: #ddd">
+                        <div class="container-fluid">
+                          <a class="navbar-brand" href="#">Navbar</a>
+                          <span class="navbar-text">Powerd by ABC.</span>
+                        </div>
+                      </nav>
+                      トグルボタン(Navbar toggle)
+                      .navbar-toggler はトグルボタンを表示します。data-bs-toggle="collapse" を指定し、data-bs-target には開閉対象要素のIDを指定します。.navbar-toggler-icon はメニューアイコンを表示します。
+
+                      Example
+                      Navbar
+                      Link#1
+                      Link#2
+                      Code
+                      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                        <div class="container-fluid">
+                          <a class="navbar-brand" href="#">Navbar</a>
+                          <button class="navbar-toggler" type="button"
+                                  data-bs-toggle="collapse" data-bs-target="#exampleNavbarToggle"
+                                  aria-controls="exampleNavbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                          </button>
+                          <div class="collapse navbar-collapse" id="exampleNavbarToggle">
+                            <ul class="navbar-nav me-auto mb-2">
+                              <li class="nav-item"><a class="nav-link" href="#">Link#1</a></li>
+                              <li class="nav-item"><a class="nav-link" href="#">Link#2</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </nav>
+                      スクロール(Scroll)
+                      .navbar-nav-scroll を指定し、style="--bs-scroll-height: ... を指定することで、トグルメニューにスクロールバーをつけることができます。
+
+                      Example
+                      Navbar
+                      Link#1
+                      Link#2
+                      Link#3
+                      Link#4
+                      Link#5
+                      Code
+                      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                        <div class="container-fluid">
+                          ...
+                          <div class="collapse navbar-collapse" id="exampleNavbarScroll">
+                            <ul class="navbar-nav me-auto mb-2 navbar-nav-scroll" style="--bs-scroll-height:5rem">
+                              ...
+                              オフキャンバス(Offcanvas)
+                              .offcanvas は通常は表示されないオフキャンバスを表示します。.offcanvas-start はテキストの開始側(左側)、.offcanvas-end は終了側(右側)に表示します。.offcanvas-header, .offcanvas-title, .offcanvas-body はオフキャンバスのヘッダ、タイトル、本文を表示します。開くボタンには data-bs-toggle="offcanvas" を指定し、data-bs-target で対象のオフキャンバス要素のIDを指定します。閉じるボタンには data-bs-dismiss="offcanvas" を指定します。
+
+                              Example
+                              Code
+                              <button class="btn btn-primary" type="button"
+                                      data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                                Show offcanvas
+                              </button>
+                              <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                                <div class="offcanvas-header">
+                                  <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas Header</h5>
+                                  <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                </div>
+                                <div class="offcanvas-body">Offcanvas body...</div>
+                              </div>
+                              方向(Direction)
+                              .offcanvas-start, .offcanvas-end, .offcanvas-top, .offcanvas-bottom はオフキャンバスを表示する方向を指定します。
+
+                              Example
+
+                              Code
+                              <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExampleStart">...</div>
+                              <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExampleEnd">...</div>
+                              <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasExampleTop">...</div>
+                              <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasExampleBottom">...</div>
+                              ページネーション(Pagination)
+                              .pagination, .page-item, .page-link はページネーションを表示します。
+
+                              Example
+                              <
+                              1
+                              2
+                              3
+                              >
+                              Code
+                              <nav>
+                                <ul class="pagination">
+                                  <li class="page-item"><a class="page-link" href="#">&lt;</a></li>
+                                  <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                  <li class="page-item"><a class="page-link" href="#">&gt;</a></li>
+                                </ul>
+                              </nav>
+                              アクティブ・ディスエイブル(Active and disabled)
+                              .active はアクティブなページを、.disabled は無効化されたページを示します。
+
+                              Example
+                              <
+                              1
+                              2
+                              3
+                              >
+                              Code
+                              <nav>
+                                <ul class="pagination">
+                                  <li class="page-item disabled"><a class="page-link" href="#">&lt;</a></li>
+                                  <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                  <li class="page-item"><a class="page-link" href="#">&gt;</a></li>
+                                </ul>
+                              </nav>
+                              サイズ(Size)
+                              .pagination-lg は大きな、.pagination-sm は小さなページネーションを表示します。
+
+                              Example
+                              1
+                              2
+                              3
+                              1
+                              2
+                              3
+                              1
+                              2
+                              3
+                              Code
+                              <nav>
+                                <ul class="pagination pagination-lg">...</ul>
+                              </nav>
+                              <nav>
+                                <ul class="pagination">...</ul>
+                              </nav>
+                              <nav>
+                                <ul class="pagination pagination-sm">...</ul>
+                              </nav>
+                              ポップオーバー(Popover)
+                              data-bs-toggle="popover" を指定したボタンがクリックされるとポップオーバーを表示します。title にはタイトル、data-bs-content にはコンテンツを指定します。
+
+                              Example
+                              Code
+                              <button type="button" class="btn btn-primary"
+                                      data-bs-toggle="popover" title="Popover title" data-bs-content="Popover content...">
+                                Popover
+                              </button>
+                              ポップオーバーを使用する画面では、ページの読み込みが完了した後に下記の JavaScript を実行してください。
+
+                              Code
+                              var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
+                              var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+                              return new bootstrap.Popover(popoverTriggerEl);
+                              });
+                              方向(Direction)
+                              data-bs-placement でポップオーバーを表示する方向を指定することができます。
+
+                              Example
+
+                              Code
+                              <button type="button" class="btn btn-secondary" data-bs-toggle="popover" data-bs-placement="top" ...>Top</button>
+                              <button type="button" class="btn btn-secondary" data-bs-toggle="popover" data-bs-placement="right" ...>Right</button>
+                              <button type="button" class="btn btn-secondary" data-bs-toggle="popover" data-bs-placement="bottom" ...>Bottom</button>
+                              <button type="button" class="btn btn-secondary" data-bs-toggle="popover" data-bs-placement="left" ...>Left</button>
+                              プログレスバー(Progress)
+                              .progress, .progress-bar はプログレスバーを表示します。割合は width: で指定します。aria-* には読み上げブラウザ等への情報を提供します。
+
+                              Example
+                              25%
+                              50%
+                              100%
+                              Code
+                              <div class="progress mb-2">
+                                <div class="progress-bar" style="width:25%" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                              </div>
+                              <div class="progress mb-2">
+                                <div class="progress-bar" style="width:50%" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
+                              </div>
+                              <div class="progress">
+                                <div class="progress-bar" style="width:100%" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">100%</div>
+                              </div>
+                              マルチプル(Multiple)
+                              下記のようにして複数の値を持つプログレスバーを表示することができます。
+
+                              Example
+                              Code
+                              <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 15%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+                                <div class="progress-bar bg-danger" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                                <div class="progress-bar bg-success" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                              </div>
+                              ストライプ・アニメーション(Stripe & animated)
+                              .progress-bar-striped はストライプ付きの、.progress-bar-animated はアニメーション付きのプログレスバーを表示します。
+
+                              Example
+                              Code
+                              <div class="progress">
+                                <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                              </div>
+                              <div class="progress">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                              </div>
+                              スクロールスパイ(Scrollspy)
+                              data-bs-spy="scroll" はスクロールスパイを構築します。スクロールスパイの本文をスクロールさせていくと、第1章が表示されている時は第1章のボタンが、第2章が表示されている時は第2章のボタンがアクティブになります。
+
+                              Example
+                              Scrollspy
+                              第1章
+                              第2章
+                              第3章
+                              第1章
+                              one
+
+                              one
+
+                              one
+
+                              one
+
+                              one
+
+                              one
+
+                              one
+
+                              one
+
+                              第2章
+                              two
+
+                              two
+
+                              two
+
+                              two
+
+                              two
+
+                              two
+
+                              two
+
+                              two
+
+                              第3章
+                              three
+
+                              three
+
+                              three
+
+                              three
+
+                              three
+
+                              three
+
+                              three
+
+                              three
+
+                              Code
+                              <nav id="scrollspy-example" class="navbar navbar-light bg-light px-3">
+                                <a class="navbar-brand" href="#">Scrollspy</a>
+                                <ul class="nav nav-pills">
+                                  <li class="nav-item">
+                                    <a class="nav-link" href="#spy-one">第2章</a>
+                                  </li>
+                                  <li class="nav-item">
+                                    <a class="nav-link" href="#spy-two">第2章</a>
+                                  </li>
+                                  <li class="nav-item">
+                                    <a class="nav-link" href="#spy-three">第3章</a>
+                                  </li>
+                                </ul>
+                              </nav>
+                              <div data-bs-spy="scroll" data-bs-target="#scrollspy-example" data-bs-offset="0" tabindex="0"
+                                   style="position:relative; height:8rem; overflow:scroll">
+                                <div class="h4" id="spy-one">第1章</div>
+                                <p>...</p>
+                                <div class="h4" id="spy-two">第2章</div>
+                                <p>...</p>
+                                <div class="h4" id="spy-three">第3章</div>
+                                <p>...</p>
+                              </div>
+                              スピナー(Spinners)
+                              .spinner-border はローディング中などを示すスピナーを表示します。.text-primary などで色を指定することもできます。
+
+                              Example
+                              Loading... Loading... Loading...
+                              Code
+                              <div class="spinner-border" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                              </div>
+                              <div class="spinner-border text-primary" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                              </div>
+                              <div class="spinner-border text-danger" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                              </div>
+                              グローイング(Growing)
+                              .spinner-grow は大きさが変化するスピナーを表示します。
+
+                              Example
+                              Loading...
+                              Code
+                              <div class="spinner-grow" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                              </div>
+                              サイズ(Size)
+                              .spinner-border-sm, .spinner-grow-sm は小さなスピナーを表示します。
+
+                              Example
+                              Loading... Loading...
+                              Code
+                              <div class="spinner-border spinner-border-sm" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                              </div>
+                              <div class="spinner-grow spinner-grow-sm" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                              </div>
+                              トースト(Toasts)
+                              .toast は、画面の右上端などに表示させるメッセージボックスを生成します。.toast-header, .toast-body はトーストのヘッダ、ボディを表示します。new bootstrap.Toast() でトースト要素からトーストオブジェクトを生成し、.show() メソッドでトーストを表示します。
+
+                              Example
+                              Code
+                              <button type="button" class="btn btn-primary" id="toastExampleBtn">Toast</button>
+                              <div class="position-fixed top-0 end-0 p-3" style="z-index: 11">
+                                <div id="toastExample" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+                                  <div class="toast-header">
+                                    <strong class="me-auto">Toast Example</strong>
+                                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                                  </div>
+                                  <div class="toast-body">
+                                    This is toast body.
+                                  </div>
+                                </div>
+                              </div>
+                              <script>
+                                  (function() {
+                                      window.addEventListener('load', function() {
+                                          var toastElm = document.getElementById('toastExample');
+                                          var toastObj = new bootstrap.Toast(toastElm, {animation:true, autohide:true, delay:2000});
+                                          document.getElementById('toastExampleBtn').addEventListener('click', function() {
+                                              toastObj.show();
+                                          });
+                                      });
+                                  })();
+                              </script>
+                              スタッキング(Stacking)
+                              .toast-container を用いることにより、複数のトーストをスタック表示することができます。
+
+                              Example
+                              Toast#1
+
+                              ...
+                              Toast#2
+
+                              ...
+                              Code
+                              <div class="toast-container">
+                                <div class="toast show">,,,</div>
+                                <div class="toast show">,,,</div>
+                              </div>
+                              オプション(Option)
+                              bootstrap.Toast() で指定するオプションは data-bs-* でも指定できます。data-bs-animation="false" はアニメーションを抑止します。data-bs-autohide="false" は自動クローズを無効化します。data-bs-delay="3000" は自動クローズまでの時間をミリ秒で指定します。
+
+                              Code
+                              <div class="toast" data-bs-animation="false">...</div>
+                              <div class="toast" data-bs-autohide="false">...</div>
+                              <div class="toast" data-bs-delay="2000">...</div>
+                              ツールチップ(Tooltips)
+                              data-bs-toggle="tooltip" は、要素にマウスを乗せた際に title で指定した内容をツールチップとして表示します。data-bs-placement にはツールチップの表示方向(top, bottom, right, left)を指定します。
+
+                              Example
+                              Code
+                              <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">
+                                Tooltip
+                              </button>
+                              <script>
+                                  (function() {
+                                      window.addEventListener("load", function() {
+                                          var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+                                          var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+                                              return new bootstrap.Tooltip(tooltipTriggerEl);
+                                          });
+                                      });
+                                  })();
+                              </script>
+                              Copyright (C) 2021 杜甫々
+                              初版：2021年8月15日、最終稿真：2021年8月15日
+                              https://www.tohoho-web.com/bootstrap5/components.html
+
+</body>
+</html>
