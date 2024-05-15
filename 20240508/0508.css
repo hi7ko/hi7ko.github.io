@@ -2,19 +2,8 @@ html{
   font-size: 16px;
   font-family: sans-serif;
 }
-main h1{
-  margin: 60px 0 20px 0;
-  border-bottom: 2px solid #253958;
-  color: #253958;
-  font-size: 1.3rem;
-}
-main h2{
-  margin: 60px 0 20px 0;
-  color: #253958;
-  font-size: 1rem;
-}
 .aikon{
-  text-align: left;
+  text-align: center;
 }
 .border-secondary{
   text-align: center;
@@ -23,20 +12,34 @@ main h2{
   border-bottom: 2px solid #253958;
 }
 .second{
-
+  font-weight: normal;
+  border-bottom: 2px solid #253958;
 }
 .third{
-
+  border-bottom: 2px solid #253958;
+}
+.fourth{
+  border-bottom: 2px solid #253958;
 }
 .copyright{
   background-color: #A09BD8;
   text-align: center;
 }
+main h1{
+  margin: 60px 0 20px 0;
+  border-bottom: 2px solid #253958;
+  color: #253958;
+  font-size: 1.3rem;
+}
+main h2 {
+  margin: 60px 0 20px 0;
+  color: #253958;
+  font-size: 1rem;
+}
 main h3 {
   margin: 60px 0 20px 0;
   color: #253958;
   font-size: 1rem;
-  border-bottom: 2px solid #253958;
 }
 .finally{
   text-align: right;
