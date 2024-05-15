@@ -37,3 +37,8 @@ main h3 {
   color: #253958;
   font-size: 1rem;
 }
+.finally{
+  text-align: right;
+  border-top: 2px solid #253958;
+  border-bottom: 2px solid #253958;
+}
