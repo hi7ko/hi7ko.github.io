@@ -15,7 +15,10 @@ html{
   font-weight: normal;
   border-bottom: 2px solid #253958;
 }
-
+.third{
+  font-weight: normal;
+  text-align: right;
+}
 .copyright{
   background-color: #A09BD8;
   text-align: center;
