@@ -4,9 +4,13 @@ html{
 }
 
 main h1{
-  color: #A09BD8;
+
 }
 
 .hero{
+  text-align: center;
+}
+.copyright{
+  background-color: #A09BD8;
   text-align: center;
 }
