@@ -17,7 +17,11 @@ html{
 }
 .third{
   font-weight: normal;
+}
+.fourth{
+  font-weight: normal;
   text-align: right;
+  border-top: 2px solid #253958;
 }
 .copyright{
   background-color: #A09BD8;
