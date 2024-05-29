@@ -1,3 +1,7 @@
 .h2{
   padding: 20px;
 }
+.menu li{
+  padding: 8px 25px;
+  border-bottom: 1px solid #000000;
+}
