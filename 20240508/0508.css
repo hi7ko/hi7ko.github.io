@@ -64,3 +64,8 @@ ul{
   list-style: none;
   justify-content: space-around;
 }
+.button{
+  border: none;
+  outline: none;
+  background: transparent;
+}
