@@ -1,7 +1,14 @@
 .h2{
   padding: 20px;
 }
-.menu li{
-  padding: 8px 25px;
-  border-bottom: 1px solid #000000;
+.topcolor{
+  display: block;
+  padding: 8px 20px;
+  line-height: 22px;
+  background: #404552;
+  border-right: 1px #3a3e49 solid;
+}
+a {
+  color: #ffffff;
+  text-decoration: none;
 }
