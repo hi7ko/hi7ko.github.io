@@ -8,7 +8,13 @@
   background: #404552;
   border-right: 1px #3a3e49 solid;
 }
-a {
-  color: #ffffff;
-  text-decoration: none;
+.secondcolor{
+  display: block;
+  padding: 8px 20px;
+  line-height: 22px;
+  background: #44739c;
+  border-right: 1px #253958 solid;
+}
+.line{
+  padding: 1px;
 }
