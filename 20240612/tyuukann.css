@@ -22,6 +22,12 @@
   width: 90px;
   height: 90px;
 }
-.ul{
-  list-style:none
+ul {
+  list-style: none;
+}
+h1{
+  margin-bottom: 100px;
+}
+h4{
+  margin-top: 50px;
 }
