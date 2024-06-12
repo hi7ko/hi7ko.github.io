@@ -1,0 +1,27 @@
+.m1bk{
+  background: #A09BD8;
+}
+.skinMenuHeader{
+  padding: 5px 10px;
+  background-color: #ffffff;
+}
+.profileUserNicknameArea{
+  float: left;
+  width: 150px;
+  padding-left: 10px;
+}
+.profileUserNickname{
+  padding-bottom: 4px;
+}
+.em{
+  font-style: normal;
+  font-weight: 700;
+}
+.userProfileImageArea{
+  float: left;
+  width: 90px;
+  height: 90px;
+}
+.ul{
+  list-style:none
+}
