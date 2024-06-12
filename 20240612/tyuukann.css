@@ -3,7 +3,6 @@
 }
 .skinMenuHeader{
   padding: 5px 10px;
-  background-color: #ffffff;
 }
 .profileUserNicknameArea{
   float: left;
@@ -18,14 +17,29 @@
   font-weight: 700;
 }
 .userProfileImageArea{
-  float: left;
   width: 90px;
   height: 90px;
+  vertical-align:baseline;
 }
 ul {
   list-style: none;
 }
 
-.h4{
-  margin-top: 50px;
+.margin{
+  margin-top: 15px;
+}
+@media only screen and (max-width: 767px) {
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+@media only screen and (min-width: 768px), print {
+  img{
+    width: 100%;
+    height: auto;
+  }
+}
+.parent {
+  display: flex;
 }
