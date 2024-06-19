@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="m0a23279.css">
+  <script type="text/javascript" src="m0a23279.js"></script>
+  <title>最終課題（JSON形式情報でリスト生成）例</title>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DEQSHT2308"></script>
+  <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-DEQSHT2308');
+  </script>
+</head>
+<body>
+<!-- Vue.jsで操作する対象としてid付け（名前は任意） -->
+<div id="vue" class="w3-container">
+  <!-- data内のlistというJSONからitemという名前で要素を一つずつ取得し繰り返し表示 -->
+  <div class="w3-card-4 w3-margin w3-padding" v-for='item in list'>
+    <!-- {{}}で囲んだ中に取得した要素の情報をセットすると表示可能 -->
+    <h1>{{item.name}}</h1>
+
+    <!-- 属性に:を付ければ取得した要素の情報をセット可能 -->
+    <!-- style属性でスタイル情報を直接指定もできる（画像サイズがばらばらの場合幅を固定できる） -->
+    <img :src='item.img' style="width: 300px">
+
+    <!-- 賞品によって単位が違うので単位情報をつけて単価を表示 -->
+    <h2>1{{item.unit}} {{item.price}}円</h2>
+
+    <h4>セット価格</h4>
+    <!-- 入れ子になっている要素もv-forで一つずつ取得可能 -->
+    <ul>
+      <!-- セット価格の数だけリスト要素を使い表示 -->
+      <li v-for='set in item.set'>{{set.qty}}{{item.unit}}入り {{set.price}}円</li>
+    </ul>
+  </div>
+</div>
+
+<script type="text/javascript">
+    // Vue.js開始
+    new Vue({
+        // ページ内のidがvueであるブロックを操作
+        el: '#vue',
+        // 利用するデータ
+        data: {
+            // リスト用配列
+            list: [
+                {"name": "どら焼き", "unit": "個", "price": 150, "img": "img/dorayaki.png", "set": [
+                        {"qty": 6, "price": 850},
+                        {"qty": 12, "price": 1680},
+                        {"qty": 24, "price": 3240}
+                    ]},
+                {"name": "カステラ", "unit": "箱", "price": 750, "img": "img/castella.png", "set": [
+                        {"qty": 2, "price": 1450},
+                        {"qty": 5, "price": 3500}
+                    ]},
+                {"name": "きんつば", "unit": "個", "price": 80, "img": "img/kintsuba.png", "set": [
+                        {"qty": 6, "price": 450},
+                        {"qty": 12, "price": 850},
+                        {"qty": 24, "price": 1680}
+                    ]},
+                {"name": "バウムクーヘン", "unit": "本", "price": 1200, "img": "img/baumkuchen.png", "set": [
+                        {"qty": 2, "price": 2200}
+                    ]}
+            ]
+        }
+    });
+</script>
+</body>
+</html>
