@@ -1,78 +1,101 @@
-*, *:before, *:after {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+/* CSSコード */
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  background: #fff;
+  position: relative;
 }
-.menu {
-  display: block;
-  overflow: hidden;
-  width: 60px;
-  height: 60px;
-  margin: 30px auto;
+
+.logo {
+  font-size: 24px;
+}
+
+/* ここから下がハンバーガーメニューに関するCSS */
+
+/* チェックボックスを非表示にする */
+.drawer_hidden {
+  display: none;
+}
+
+/* ハンバーガーアイコンの設置スペース */
+.drawer_open {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 20px;
+  z-index: 100;/* 重なり順を一番上にする */
   cursor: pointer;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-  border: 3px solid transparent;
-  border-radius: 50%;
-  background-color: #1b2538;
 }
-.menu div.menubar {
-  width: 30px;
-  margin: 17px auto;
-}
-.menu div.menubar .bar {
+
+/* ハンバーガーメニューのアイコン */
+.drawer_open span,
+.drawer_open span:before,
+.drawer_open span:after {
+  content: '';
   display: block;
-  width: 100%;
-  height: 5px;
-  margin-top: 3px;
-  border-radius: 2px;
-  background-color: #ffffff;
+  height: 3px;
+  width: 25px;
+  border-radius: 3px;
+  background: #333;
+  transition: 0.5s;
+  position: absolute;
 }
-.menu ul {
-  display: none;
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+
+/* 三本線の一番上の棒の位置調整 */
+.drawer_open span:before {
+  bottom: 8px;
+}
+
+/* 三本線の一番下の棒の位置調整 */
+.drawer_open span:after {
+  top: 8px;
+}
+
+/* アイコンがクリックされたら真ん中の線を透明にする */
+#drawer_input:checked ~ .drawer_open span {
+  background: rgba(255, 255, 255, 0);
+}
+
+/* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
+#drawer_input:checked ~ .drawer_open span::before {
+  bottom: 0;
+  transform: rotate(45deg);
+}
+
+#drawer_input:checked ~ .drawer_open span::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+/* メニューのデザイン*/
+.nav_content {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  bottom: 100%;
+  left: 0%; /* メニューを画面の外に飛ばす */
+  z-index: 99;
+  background: rgb(110, 110, 110);
+  transition: .5s;
   text-align: center;
-  opacity: 0;
+  padding-top: 20px;
 }
-.menu ul li {
-  display: inline-block;
+
+/* メニュー黒ポチを消す */
+.nav_list {
+  list-style: none;
 }
-.menu ul li a {
-  display: inline-block;
-  padding: 0.7em 0.5em;
-  -webkit-transition: all 0.3s ease-in;
-  transition: all 0.3s ease-in;
+
+.nav_item a {
+  color: #fff;
   text-decoration: none;
-  color: #1b2538;
-  border-bottom: 4px solid transparent;
-  height: 56px;
-  line-height: 2em;
 }
-.menu ul li a:hover {
-  color: #ffffff;
-  background-color: #1b2538;
-}
-.menu ul li a:target {
-  border-bottom-color: #1b2538;
-}
-/* クリックした時の動き */
-#cp_navimenuid {
-  display: none;
-}
-#cp_navimenuid:checked ~ .menu {
-  width: 100%;
-  height: 60px;
-  border: 3px solid #1b2538;
-  border-radius: 5px;
-  background-color: transparent;
-}
-#cp_navimenuid:checked ~ .menu > ul {
-  display: block;
-  opacity: 1;
-}
-#cp_navimenuid:checked ~ .menu > .menubar {
-  display: none;
+
+/* アイコンがクリックされたらメニューを表示 */
+#drawer_input:checked ~ .nav_content {
+  bottom: 0;/* メニューを画面に入れる */
+
 }
