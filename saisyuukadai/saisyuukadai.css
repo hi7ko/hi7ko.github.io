@@ -37,8 +37,11 @@ a{
   border-bottom: #253958;
   border-left: #253958;
 }
-.waku2{
+.waku2 {
   border-top: #253958;
   border-bottom: #253958;
   border-right: #253958;
+}
+body{
+  background-color: #A09BD8;color: #404552;
 }
