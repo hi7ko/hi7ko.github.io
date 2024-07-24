@@ -58,32 +58,6 @@ input[name="slideshow"] {
   display: none;
 }
 
-/* :::::: slideContents :::::: */
-.slideContents {
-  position: relative;
-  background: #86c0de;
-  text-align: center;
-  -webkit-user-select: none;
-  user-select: none;
-}
-.slideContents section {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  transform: translateX(100%);
-  transition: transform .6s cubic-bezier(0.215, 0.61, 0.355, 1);
-}
-.slideContents section img {
-  max-width: 100%;
-  height: auto;
-  padding: 0 50px;
-  box-sizing: border-box;
-  vertical-align: middle;
-}
-@media (min-width: 520px) {
-  .slideContents section img {
-    aspect-ratio: 3 / 1;
-    object-fit: cover;
-  }
+.pl{
+ padding-left: 50px;
 }
