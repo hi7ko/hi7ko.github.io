@@ -1,4 +1,3 @@
-
 let variableA;
 variableA="最初の代入A"
 console.log(variableA);
