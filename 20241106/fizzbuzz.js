@@ -24,14 +24,14 @@ function doFizzBuzz(){
     }
 }
 
-function checkFizzBuzz(i){
-    if((i % 3 == 0) && (i % 5 == 0)){
-        return `FizzBuzz<br>`;
-    }else if(i % 3 == 0){
-        return `Fizz<br>`;
-    }else if(i % 5 == 0){
-        return `Buzz<br />`;
-    }else {
-        return `${i}<br>`;
+function checkFizzBuzz(num) {
+    if (num % 15 === 0) {
+        return 'FizzBuzz<br>';
+    } else if (num % 3 === 0) {
+        return 'Fizz<br>';
+    } else if (num % 5 === 0) {
+        return 'Buzz<br>';
+    } else {
+        return num + '<br>';
     }
 }
