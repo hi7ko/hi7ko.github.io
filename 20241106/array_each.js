@@ -26,8 +26,8 @@ while(i < fruitNames.length) {
 // answer.innerHTML = `<ul>${html}</ul>`;
 
 // Array.forEach
-let html = '';
-fruitNames.forEach(function(fruitName){
-    html += `<li>${fruitName}</li>`;
-});
-answer.innerHTML = `<ul>${html}</ul>`;
+//let html = '';
+//fruitNames.forEach(function(fruitName){
+//    html += `<li>${fruitName}</li>`;
+//});
+//answer.innerHTML = `<ul>${html}</ul>`;
