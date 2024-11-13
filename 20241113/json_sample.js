@@ -3,7 +3,13 @@ fetch("https://morimorihoge.github.io/teu2024f/tweets.json").then(
         return response.json();
     }
 ).then(
-    function(json){
-        document.querySelector("#answer").innerHTML = JSON[0].name;
+    function(json) {
+        json.forEach(
+            (tweet) => {
+                document.querySelector("#answer").innerHTML += `${tweet.name}<br>`;
+
+                document.querySelector("#answer").innerHTML = json[0].name;
+            }
+        )
     }
 );
