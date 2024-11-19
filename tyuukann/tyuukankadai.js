@@ -8,7 +8,7 @@ function searchtweetAll() {
     ).then(
         (json) => {
             document.querySelector("#answer").innerHTML =
-                `${json.tweets[0].name} ${json.tweets[0].message} ${json.tweets[0].tweetedAt} ${json.tweets[0].avatar}`;
+                `${json[0].name} ${json[0].message} ${json[0].tweetedAt} ${json[0].avatar}`;
         }
     );
 }
