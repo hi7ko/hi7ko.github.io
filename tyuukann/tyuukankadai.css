@@ -1,48 +1,38 @@
 #answer {
-  border: 1px solid #000000;
+  border: 1px solid#086776;
   border-radius: 8px;
-  padding: 5px;
+  padding: 10px;
   background-color: #ffffff;
 }
-
 .tweet-item {
   display: flex;
   align-items: center;
-  padding: 5px;
-  border-bottom: 1px solid #000000; /* 各ツイートを線で区切る */
+  padding: 10px;
+  border-bottom: 1px solid #086776;
 }
-
-.tweet-item:last-child {
-  border-bottom: none; /* 最後のツイートには下線を追加しない */
-}
-
 .tweet-avatar {
   width: 50px;
   height: 50px;
+  border-radius: 50%;
   margin-right: 10px;
 }
-
 .tweet-content {
   flex: 1;
 }
-
 .tweet-name {
   font-weight: bold;
 }
-
 .tweet-message {
   margin: 5px 0;
 }
-
 .tweet-At {
-  color: #086776;
+  color: #888;
   font-size: 1rem;
 }
-
 #user-buttons button {
   margin: 0 5px;
   padding: 5px 10px;
   border-radius: 20px;
-  border: 1px solid #000000; /* ボタンに境界線を追加 */
+  border: 1px solid #086776; /* ボタンに境界線を追加 */
   background-color: #ffffff;
 }

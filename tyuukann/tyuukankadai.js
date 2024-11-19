@@ -1,5 +1,14 @@
 window.onload = function() {
     let answer = document.querySelector('#answer');
+    let tweets = [];
+
+    // tweets.jsからデータを取得
+    fetch('https://morimorihoge.github.io/teu2024f/tweets.js')
+        .then(response => response.json())
+        .then(data => {
+            tweets = data;
+            displayTweets(tweets);
+        })
 
     // 全てのTweetを表示する関数
     function displayTweets(tweetsToDisplay) {
