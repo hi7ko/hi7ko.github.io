@@ -2,18 +2,23 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>ツイート表示</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>中間課題</title>
+  <link rel="stylesheet" href="tyuukankadai.css">
 </head>
 <body>
-<h1>ツイート検索</h1>
-<button onclick="searchtweetAll()">全てのツイート</button>
-<button onclick="searchtweet('三郎BOT')">三郎BOT</button>
-<button onclick="searchtweet('二郎')">二郎</button>
-<button onclick="searchtweet('太郎')">太郎</button>
-<hr>
-<div id="answer"></div>
+<div class="container">
+  <h1 class="mt-5 text-start">ツイート一覧</h1>
 
-<script type="text/javascript" src="tyuukankadai.js"></script>
+  <div id="user-buttons" class="d-flex justify-content-start mt-4 mb-4">
+  </div>
+
+  <div id="answer" class="mt-4"></div>
+
+</div>
+
+<script src="https://morimorihoge.github.io/teu2024f/tweets.js"></script>
+<script src="tyuukankadai.js"></script>
 
 </body>
 </html>

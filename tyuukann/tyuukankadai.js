@@ -1,40 +1,54 @@
-// HTMLのdiv要素を取得
-const answerDiv = document.getElementById('answer');
+window.onload = function() {
+    let answer = document.querySelector('#answer');
 
-// 全てのツイートを表示する関数
-function searchtweetAll() {
-    answerDiv.innerHTML = ''; // 以前の結果をクリア
-    tweets.forEach(tweet => {
-        createTweetElement(tweet);
+    // 全てのTweetを表示する関数
+    function displayTweets(tweetsToDisplay) {
+        let html = '';
+        tweetsToDisplay.forEach(tweet => {
+            html += `
+        <div class="tweet-item">
+          <img src="${tweet.avatar}" alt="avatar" class="tweet-avatar">
+          <div class="tweet-content">
+            <div class="tweet-name">${tweet.name}</div>
+            <div class="tweet-message">${tweet.message}</div>
+            <div class="tweet-At">${tweet.tweetedAt}</div>
+          </div>
+        </div>
+      `;
+        });
+        answer.innerHTML = html;
+    }
+
+    // 初回表示で全てのTweetを表示
+    displayTweets(tweets);
+
+    // ユーザー名のボタンを動的に作成
+    const userButtons = document.getElementById('user-buttons');
+    const users = [...new Set(tweets.map(tweet => tweet.name))];
+
+    // 'All' ボタンを追加
+    const allButton = document.createElement('button');
+    allButton.textContent = 'All';
+    allButton.onclick = () => filterTweets('All');
+    userButtons.appendChild(allButton);
+
+    // 各ユーザーごとのボタンを追加
+    users.forEach(user => {
+        const button = document.createElement('button');
+        button.textContent = user;
+        button.onclick = () => filterTweets(user);
+        userButtons.appendChild(button);
     });
+
+    // ユーザー名でTweetをフィルタリングする関数
+    window.filterTweets = function(user) {
+        if (user === 'All') {
+            // Allボタンが押された時、全てのTweetを表示
+            displayTweets(tweets);
+        } else {
+            // 特定のユーザーのTweetだけを表示
+            const filteredTweets = tweets.filter(tweet => tweet.name === user);
+            displayTweets(filteredTweets);
+        }
+    }
 }
-
-// 特定のユーザーのツイートを表示する関数
-function searchtweet(name) {
-    answerDiv.innerHTML = '';
-    const filteredTweets = tweets.filter(tweet => tweet.name === name);
-    filteredTweets.forEach(tweet => {
-        createTweetElement(tweet);
-    });
-}
-
-// ツイート情報をHTML要素に変換してdiv要素に追加する関数
-function createTweetElement(tweet) {
-    const tweetElement = document.createElement('div');
-    tweetElement.innerHTML = `
-    <img src="${tweet.avatar}" alt="${tweet.name}のアバター">
-    <p><strong>${tweet.name}</strong>: ${tweet.message}</p>
-    <p>${tweet.tweetedAt}</p>
-  `;
-    answerDiv.appendChild(tweetElement);
-}
-
-// ボタンのクリックイベントにそれぞれ関数を紐づける
-const searchtweet3Button = document.querySelector('button[onclick="searchtweet3()"]');
-searchtweet3Button.onclick = () => searchtweet('三郎BOT');
-
-const searchtweet2Button = document.querySelector('button[onclick="searchtweet2()"]');
-searchtweet2Button.onclick = () => searchtweet('二郎');
-
-const searchtweet1Button = document.querySelector('button[onclick="searchtweet1()"]');
-searchtweet1Button.onclick = () => searchtweet('太郎');
