@@ -1,8 +1,6 @@
 window.onload = function() {
     let answer = document.querySelector('#answer');
     let tweets = [];
-
-    // tweets.jsからデータを取得
     fetch('https://morimorihoge.github.io/teu2024f/tweets.js')
         .then(response => response.json())
         .then(data => {
@@ -54,7 +52,15 @@ window.onload = function() {
         if (user === 'All') {
             // Allボタンが押された時、全てのTweetを表示
             displayTweets(tweets);
-        } else {
+        } else if(user === '三郎BOT') {
+            // 特定のユーザーのTweetだけを表示
+            const filteredTweets = tweets.filter(tweet => tweet.name === user);
+            displayTweets(filteredTweets);
+        }else if(user === '太郎') {
+            // 特定のユーザーのTweetだけを表示
+            const filteredTweets = tweets.filter(tweet => tweet.name === user);
+            displayTweets(filteredTweets);
+        }else if(user === '次郎') {
             // 特定のユーザーのTweetだけを表示
             const filteredTweets = tweets.filter(tweet => tweet.name === user);
             displayTweets(filteredTweets);

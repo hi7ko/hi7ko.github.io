@@ -1,19 +1,21 @@
 <!DOCTYPE html>
-<html lang="ja">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>中間課題</title>
   <link rel="stylesheet" href="tyuukankadai.css">
 </head>
-<body>
 <div class="container">
-  <h1 class="mt-5 text-start">ツイート一覧</h1>
-  <div id="user-buttons" class="d-flex justify-content-start mt-4 mb-4">
-  </div>
+  <h1 class="mt-5">ツイート一覧</h1>
   <div id="answer" class="mt-4"></div>
+  <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+    <div class="btn-group me-2">
+      <button type="button" onclick="All()">All</button>
+      <button type="button" onclick="BOT()">三郎BOT</button>
+      <button type="button" onclick="tarou()">太郎</button>
+      <button type="button" onclick="jiro()">次郎</button>
+    </div>
+  </div>
 </div>
-<script src="tyuukankadai.js"></script>
-
-</body>
-</html>
+  <script src="tweets.js"></script>
+  <script src="tyuukankadai.js"></script>
