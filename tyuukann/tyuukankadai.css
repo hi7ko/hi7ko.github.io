@@ -1,7 +1,27 @@
-.tweets-photo{
-  width:120px;
-  height:120px;
+.flex .text {
+  margin: 0 0 0 20px;
+  padding: 0;
 }
-.tweets-At{
-  opacity:0.6;
+.botan{
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+}
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.tweet-item {
+  display: flex;
+}
+
+.tweets-photo {
+  width: 100px;
+  height: 100px;
+  margin-right: 10px;
+}
+
+.tweet-content {
+  flex-grow: 1;
 }

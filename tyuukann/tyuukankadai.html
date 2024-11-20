@@ -4,18 +4,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>中間課題</title>
   <link rel="stylesheet" href="tyuukankadai.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 </head>
 <div class="container">
-  <h1 class="mt-5">ツイート一覧</h1>
-
-  <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-    <div class="btn-group" role="group" aria-label="Basic example">
-      <button type="button" class="btn btn-secondary" onclick="All('')">All</button>
-      <button type="button" class="btn btn-secondary" onclick="saburou('三郎BOT')">三郎BOT</button>
-      <button type="button" class="btn btn-secondary" onclick="jirou('次郎')">次郎</button>
-      <button type="button" class="btn btn-secondary" onclick="tarou('太郎')">太郎</button>
-    </div>
+  <h1 class="mt-5 border-bottom border-2">ツイート一覧</h1>
+</div>
+<div class="container">
+  <div>
+    <form class="botan"><!--ボタン挿入-->
+      <input class="rounded-left" type="button" onclick="All('')" value="すべて"><input type="button" onclick="saburou('三郎BOT')" value="三郎BOT"><input type="button" onclick="jirou('次郎')" value="次郎"><input type="button" onclick="tarou('太郎')" value="太郎">
+    </form>
   </div>
+</div>
+<div class="container">
   <div id="answer" class="mt-4"></div>
 </div>
   <script src="tweets.js"></script>
