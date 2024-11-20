@@ -2,7 +2,7 @@ let i =0;
 answer.innerHTML ="";
 let html = "";
 while(i < tweets.length){
-    html += `<div class="flex my-3">
+    html += `<div class="flex my-5 border border-primary">
     <div class="tweet-item">
         <img src="${tweets[i].avatar}" class="tweets-photo" alt="png">
         <div class="tweet-content">
@@ -20,7 +20,7 @@ function All() {
     answer.innerHTML ="";
     html = "";
     while(i < tweets.length){
-        html += `<div class="flex my-3">
+        html += `<div class="flex my-5 border border-primary">
     <div class="tweet-item">
         <img src="${tweets[i].avatar}" class="tweets-photo" alt="png">
         <div class="tweet-content">
@@ -42,7 +42,7 @@ function saburou(){
     answer.innerHTML = "";
     while (i < tweets.length) {
         if (tweets[i].name === "三郎BOT") {
-            html += `<div class="flex my-3">
+            html += `<div class="flex my-5 border border-primary">
     <div class="tweet-item">
         <img src="${tweets[i].avatar}" class="tweets-photo" alt="png">
         <div class="tweet-content">
@@ -64,7 +64,7 @@ function tarou(){
     answer.innerHTML = "";
     while (i < tweets.length) {
         if (tweets[i].name === "太郎") {
-            html += `<div class="flex my-3">
+            html += `<div class="flex my-5 border border-primary">
     <div class="tweet-item">
         <img src="${tweets[i].avatar}" class="tweets-photo" alt="png">
         <div class="tweet-content">
@@ -86,7 +86,7 @@ function jirou(){
     answer.innerHTML = "";
     while (i < tweets.length) {
         if (tweets[i].name === "次郎") {
-                html += `<div class="flex my-3">
+                html += `<div class="flex my-5 border border-primary">
     <div class="tweet-item">
         <img src="${tweets[i].avatar}" class="tweets-photo" alt="png">
         <div class="tweet-content">
