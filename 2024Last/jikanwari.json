@@ -1,0 +1,163 @@
+[
+
+  {
+    "class": null,
+    "name": null,
+    "place": null,
+    "time": "月曜１限"
+  },
+  {
+    "class": null,
+    "name": null,
+    "place": null,
+    "time": "月曜２限"
+  },
+  {
+    "class": "アカデミックスキルズⅡ",
+    "name": "佐藤　宏樹",
+    "place": "講Ａ３０１",
+    "time": "月曜３限"
+  },
+  {
+    "class": "グローバルメディア論",
+    "name": "飯沼　瑞穂",
+    "place": "研Ａ３０３",
+    "time": "月曜４限"
+  },
+  {
+    "class": "アカデミックスキルズⅡ",
+    "name": "佐藤　宏樹",
+    "place": "講Ａ３０１",
+    "time": "月曜３限"
+  },
+  {
+  "class": null,
+  "name": null,
+  "place": null,
+  "time": "月曜５限"
+  },
+
+  {
+    "class": "Integrated EnglishⅡ",
+    "name": "大内田　優子",
+    "place": "講Ａ３０１",
+    "time": "火曜１限"
+  },
+  {
+    "class": "スポーツ実技Ⅳ",
+    "name": "後藤　肇",
+    "place": "体育館",
+    "time": "火曜２限"
+  },
+  {
+    "class": "メディア特別講義Ⅱ",
+    "name": "吉岡　英樹",
+    "place": "メディアホール",
+    "time": "火曜３限"
+  },
+  {
+    "class": "インタラクティブアート論",
+    "name": "伊藤　彰教",
+    "place": "研Ａ４０３",
+    "time": "火曜４限"
+  },
+  {
+    "class": "統計データ分析",
+    "name": "小林　克正",
+    "place": "講実４０１",
+    "time": "火曜５限"
+  },
+
+  {
+    "class": "データ処理と人工知能",
+    "name": "藤澤　公也",
+    "place": "研Ａ３０３",
+    "time": "水曜１限"
+  },
+  {
+    "class": "ゲームデザイン論",
+    "name": "安原　広和",
+    "place": "メディアホール",
+    "time": "水曜２限"
+  },
+  {
+    "class": null,
+    "name": null,
+    "place": null,
+    "time": "水曜３限"
+  },
+  {
+  "class": null,
+  "name": null,
+  "place": null,
+  "time": "水曜４限"
+  },
+  {
+    "class": "実践的ＷＥＢ開発",
+    "name": "羽田　久一",
+    "place": "講実２０３",
+    "time": "水曜５限"
+  },
+
+  {
+    "class": null,
+    "name": null,
+    "place": null,
+    "time": "木曜１限"
+  },
+  {
+    "class": "欧米社会文化論",
+    "name": "橘　由布季",
+    "place": "研Ａ３０３",
+    "time": "木曜２限"
+  },
+  {
+    "class": "ニュースメディア論",
+    "name": "野島　卓",
+    "place": "研Ａ３０３",
+    "time": "木曜３限"
+  },
+  {
+    "class": "情報法",
+    "name": "中村　伊知郎",
+    "place": "研Ａ３０３",
+    "time": "木曜４限"
+  },
+  {
+    "class": null,
+    "name": null,
+    "place": null,
+    "time": "木曜５限"
+  },
+
+  {
+    "class": "リアルタイム3DCGプログラミング",
+    "name": "渡辺　大地",
+    "place": "研Ａ３０３",
+    "time": "金曜１限"
+  },
+  {
+    "class": "リアルタイム3DCGプログラミング",
+    "name": "渡辺　大地",
+    "place": "研Ａ３０３",
+    "time": "金曜２限"
+  },
+  {
+    "class": null,
+    "name": null,
+    "place": null,
+    "time": "金曜３限"
+  },
+  {
+    "class": null,
+    "name": null,
+    "place": null,
+    "time": "金曜４限"
+  },
+  {
+    "class": null,
+    "name": null,
+    "place": null,
+    "time": "金曜５限"
+  }
+]

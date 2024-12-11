@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ja" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <script type="text/javascript" src="WorkManagement.js"></script>
+  <title>work management</title>
+</head>
+<body>
+<div class="container">
+<!--To-Doリスト:-->
+<!--各タスクをliタグで表現し、ulタグでまとめる-->
+<!--編集・削除ボタンを各タスクに配置 入力フォームを設け、新しいタスクを追加できるようにする-->
+<div class="container">
+  <div class="container">
+    <div class="ToDo">
+
+      <input type="checkbox" id="coding" name="interest" value="coding" />
+      <label for="coding"></label>
+      <input type="text" id="taskInput" placeholder="タスクを入力">
+      <button id="addButton">追加</button>
+
+      <ul id="taskList"></ul>
+
+
+
+    </div>
+  </div>
+<!--タイマー:-->
+<!--表示用のdivタグ、入力フォーム、スタート/ストップ/リセットボタンを設置-->
+<!--授業スケジュール:<table>タグを用いて、曜日と時間帯を軸に授業情報を表示入力フォームで新しい授業情報を追加できるようにする-->
+
+  <div class="container">
+    <div class="Timer">
+
+    </div>
+  </div>
+
+</div>
+<!--  スケジュール:-->
+<!--  json読み込む-->
+
+  <div class="container">
+
+  </div>
+</div>
+
+</body>
+</html>
