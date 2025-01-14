@@ -7,47 +7,36 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-  <script type="text/javascript" src="WorkManagement.js"></script>
   <title>work management</title>
 </head>
 <body>
 <div class="container">
-<!--To-Doリスト:-->
-<!--各タスクをliタグで表現し、ulタグでまとめる-->
-<!--編集・削除ボタンを各タスクに配置 入力フォームを設け、新しいタスクを追加できるようにする-->
-<div class="container">
-  <div class="container">
-    <div class="ToDo">
-
-      <label><input id="todoInput" placeholder="ToDoを入力"></label>
-      <button id="addButton">追加</button>
-
-      <input type="checkbox" id="coding" name="interest" value="coding">
-      <label for="coding">
-      </label>
-
-
-
+  <div class="row">
+    <div class="col-md-6">
+      <div class="ToDo">
+        <h1 class="mt-3">TODO-List</h1>
+        <form class="mb-3">
+          <input class="task_value" type="text" />
+          <button class="task_submit" type="button">Add Task</button>
+        </form>
+        <ul class="task_list"></ul>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="Timer mb-4">
+        <h1 class="mt-3 mb-2">Timer</h1>
+        <input type="number" id="countdown-input" placeholder="カウントダウン時間（分）">
+        <button onclick="startCountdown()">開始</button>
+        <div id="countdown-display"></div>
+      </div>
+      <div class="Schedule">
+        <h1>Schedule</h1>
+        <div id="dayOfWeek"></div>
+        <div id="schedule"></div>
+      </div>
     </div>
   </div>
-<!--タイマー:-->
-<!--表示用のdivタグ、入力フォーム、スタート/ストップ/リセットボタンを設置-->
-<!--授業スケジュール:<table>タグを用いて、曜日と時間帯を軸に授業情報を表示入力フォームで新しい授業情報を追加できるようにする-->
-
-  <div class="container">
-    <div class="Timer">
-
-    </div>
-  </div>
-
 </div>
-<!--  スケジュール:-->
-<!--  json読み込む-->
-
-  <div class="container">
-
-  </div>
-</div>
-
 </body>
+<script type="text/javascript" src="WorkManagement.js"></script>
 </html>
